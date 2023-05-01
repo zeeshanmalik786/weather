@@ -5,3 +5,4 @@ canadacities.xlsx
 dist/*
 build/*
 weather/config.py
+weather.egg-info
