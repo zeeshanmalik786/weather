@@ -15,9 +15,9 @@ Any location on the globe
 Fields in API Response
 
 <b>coord</b>
-1. coord.lon 
+1. <b>coord.lon</b> 
    City geo location, longitude
-2. coord.lat 
+2. <b>coord.lat</b> 
    City geo location, latitude
 
 3. <b>weather.id</b> Weather condition id

@@ -4,3 +4,4 @@ weather-api.py
 canadacities.xlsx
 dist/*
 build/*
+weather/config.py

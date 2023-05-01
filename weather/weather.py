@@ -16,7 +16,7 @@ class weather:
             "Latitude",
             "Temperature in Fahrenheit",
             "Temperature in Celsius",
-            "Description",
+            "precipitation",
             "Pressure",
             "Humidity",
             "Visibility",
@@ -29,7 +29,7 @@ class weather:
                   StructField("Latitude",FloatType(),True),
                   StructField("Temperature_in_Fahrenheit", DoubleType(), True),
                   StructField("Temperature_in_Celsius", DoubleType(), True),
-                  StructField("Description", StringType(), True),
+                  StructField("precipitation", StringType(), True),
                   StructField("Pressure", StringType(), True),
                   StructField("Humidity", StringType(), True),
                   StructField("Visibility", StringType(), True),
@@ -42,7 +42,7 @@ class weather:
         for index, city in enumerate(cities):
             try:
                 print(city)
-                api_url = "https://api.openweathermap.org/data/2.5/weather?" + "q=" + str(city) + ",CA&APPID=2a2f1e754c02588897a5b262265e9353"
+                api_url = "https://api.openweathermap.org/data/2.5/weather?" + "q=" + str(city) + str(self.con.key)
                 response = requests.get(api_url)
                 output = response.json()
                 result = result.append({"City": city,
@@ -50,7 +50,7 @@ class weather:
                                         "Latitude": output['coord']['lat'],
                                         "Temperature in Fahrenheit": round((output['main']['temp'] - 273.15) * 9 / 5 + 32, 2),
                                         "Temperature in Celsius": round((output['main']['temp'] - 273.15), 2),
-                                        "Description": output['weather'][0]['description'],
+                                        "precipitation": output['weather'][0]['description'],
                                         "Pressure": output['main']['pressure'],
                                         "Humidity": output['main']['humidity'],
                                         "Visibility": output['visibility'],

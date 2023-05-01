@@ -21,8 +21,6 @@ def main(cities, today):
     print("total time", datetime.now() - start)
 
 
-
-
 def run(cities, today):
 
     main(cities, today)
