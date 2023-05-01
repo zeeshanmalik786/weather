@@ -1,0 +1,6 @@
+metastore_db/*
+.idea/*
+weather-api.py
+canadacities.xlsx
+dist/*
+build/*
