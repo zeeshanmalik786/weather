@@ -14,47 +14,47 @@ Any location on the globe
 
 Fields in API Response
 
-coord
+<b>coord</b>
 1. coord.lon 
    City geo location, longitude
 2. coord.lat 
    City geo location, latitude
 
-3. weather.id Weather condition id
-4. weather.main Group of weather parameters (Rain, Snow, Extreme etc.)
-5. weather.description Weather condition within the group. You can get the output in your language. Learn more
-6. weather.icon Weather icon id
+3. <b>weather.id</b> Weather condition id
+4. <b>weather.main</b> Group of weather parameters (Rain, Snow, Extreme etc.)
+5. <b>weather.description</b> Weather condition within the group. You can get the output in your language. Learn more
+6. <b>weather.icon</b> Weather icon id
 base Internal parameter
 main
-7. main.temp Temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
+7. <b>main.temp</b> Temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
 main.feels_like Temperature. This temperature parameter accounts for the human perception of weather. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
-8. main.pressure Atmospheric pressure (on the sea level, if there is no sea_level or grnd_level data), hPa
-9. main.humidity Humidity, %
-10. main.temp_min Minimum temperature at the moment. This is minimal currently observed temperature (within large megalopolises and urban areas). Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
-11. main.temp_max Maximum temperature at the moment. This is maximal currently observed temperature (within large megalopolises and urban areas). Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
-12. main.sea_level Atmospheric pressure on the sea level, hPa
-13. main.grnd_level Atmospheric pressure on the ground level, hPa
-14. visibility Visibility, meter. The maximum value of the visibility is 10km
+8. <b>main.pressure</b> Atmospheric pressure (on the sea level, if there is no sea_level or grnd_level data), hPa
+9. <b>main.humidity</b> Humidity, %
+10. <b>main.temp_min</b> Minimum temperature at the moment. This is minimal currently observed temperature (within large megalopolises and urban areas). Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
+11. <b>main.temp_max</b> Maximum temperature at the moment. This is maximal currently observed temperature (within large megalopolises and urban areas). Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.
+12. <b>main.sea_level</b> Atmospheric pressure on the sea level, hPa
+13. <b>main.grnd_level</b> Atmospheric pressure on the ground level, hPa
+14. <b>visibility Visibility</b>, meter. The maximum value of the visibility is 10km
 wind
-15. wind.speed Wind speed. Unit Default: meter/sec, Metric: meter/sec, Imperial: miles/hour.
-16. wind.deg Wind direction, degrees (meteorological)
-17. wind.gust Wind gust. Unit Default: meter/sec, Metric: meter/sec, Imperial: miles/hour
+15. <b>wind.speed</b> Wind speed. Unit Default: meter/sec, Metric: meter/sec, Imperial: miles/hour.
+16. <b>wind.deg</b> Wind direction, degrees (meteorological)
+17. <b>wind.gust</b> Wind gust. Unit Default: meter/sec, Metric: meter/sec, Imperial: miles/hour
 clouds
-18. clouds.all Cloudiness, %
+18. <b>clouds.all</b> Cloudiness, %
 rain
-19. rain.1h (where available) Rain volume for the last 1 hour, mm
-20. rain.3h (where available) Rain volume for the last 3 hours, mm
+19. <b>rain.1h</b> (where available) Rain volume for the last 1 hour, mm
+20. <b>rain.3h</b> (where available) Rain volume for the last 3 hours, mm
 snow
-21. snow.1h(where available) Snow volume for the last 1 hour, mm
-22. snow.3h (where available)Snow volume for the last 3 hours, mm
+21. <b>snow.1h</b>(where available) Snow volume for the last 1 hour, mm
+22. <b>snow.3h</b> (where available)Snow volume for the last 3 hours, mm
 dt Time of data calculation, unix, UTC
 sys
-23. sys.type Internal parameter
-24. sys.id Internal parameter
-25. sys.message Internal parameter
-26. sys.country Country code (GB, JP etc.)
-27. sys.sunrise Sunrise time, unix, UTC
-28. sys.sunset Sunset time, unix, UTC
+23. <b>sys.type</b> Internal parameter
+24. <b>sys.id</b> Internal parameter
+25. <b>sys.message</b> Internal parameter
+26. <b>sys.country</b> Country code (GB, JP etc.)
+27. <b>sys.sunrise</b> Sunrise time, unix, UTC
+28. <b>sys.sunset</b> Sunset time, unix, UTC
 
 
 <h2> Sample API Response </h2>                          
