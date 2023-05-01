@@ -23,19 +23,6 @@ class weather:
             "Speed",
             "Date"]
 
-        self.schema = StructType([
-                  StructField("City",StringType(),True),
-                  StructField("Longitude",FloatType(),True),
-                  StructField("Latitude",FloatType(),True),
-                  StructField("Temperature_in_Fahrenheit", DoubleType(), True),
-                  StructField("Temperature_in_Celsius", DoubleType(), True),
-                  StructField("precipitation", StringType(), True),
-                  StructField("Pressure", StringType(), True),
-                  StructField("Humidity", StringType(), True),
-                  StructField("Visibility", StringType(), True),
-                  StructField("Speed", DoubleType(), True),
-                  StructField("Date", StringType(), True)
-                                ])
 
     def __weather__(self, date, cities):
         result = pd.DataFrame(columns=self.column)
@@ -59,11 +46,13 @@ class weather:
                 print("Record: ", index)
             except:
                 pass
-        output = self.spark.createDataFrame(result, self.schema)
+        output = self.spark.createDataFrame(result, self.con.schema)
         self.spark.sql("DROP TABLE IF EXISTS default.weather")
         output.write.format("delta").saveAsTable("default.weather")
 
         self.spark.sql("INSERT INTO cable_access_networks_performance.weather SELECT * from default.weather")
+
+        return True
 
 
 
