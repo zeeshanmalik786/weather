@@ -24,7 +24,7 @@ class weather:
             "Date"]
 
 
-    def __weather__(self, date, cities):
+    def __weather__(self, date, cities, type):
         result = pd.DataFrame(columns=self.column)
         for index, city in enumerate(cities):
             try:
@@ -49,8 +49,10 @@ class weather:
         output = self.spark.createDataFrame(result, self.con.schema)
         self.spark.sql("DROP TABLE IF EXISTS default.weather")
         output.write.format("delta").saveAsTable("default.weather")
-
-        self.spark.sql("INSERT INTO cable_access_networks_performance.weather SELECT * from default.weather")
+        if type=="daily":
+            self.spark.sql("INSERT INTO cable_access_networks_performance.weather SELECT * from default.weather")
+        else:
+            self.spark.sql("INSERT INTO cable_access_networks_performance.weather_hourly SELECT * from default.weather")
 
         return True
 
